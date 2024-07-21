@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  </head>
+  <body>
+    <!-- As a heading -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: maroon;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Govind Velamoor</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#projects"
+                >Research</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#entrepreneurship">Entrepreneurship</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#math">Math</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+                         <li class="nav-item">
+              <a class="nav-link" href="#music">Music</a>
+            </li>
+                         <li class="nav-item">
+              <a class="nav-link" href="#origami">Origami</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <br />
+    <div class="container col-xxl-8 px-4 py-5">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+          <img
+            src="static/images/govind_velamoor-480.webp"
+            class="d-block mx-lg-auto img-fluid"
+            alt="Bootstrap Themes"
+            width="700"
+            height="500"
+            loading="lazy"
+          />
+        </div>
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold lh-1 mb-3">Hi, I'm Govind Velamoor</h1>
+          <p class="lead">
+            I'm a 17 year old rising senior at the Commonwealth School in
+            Boston, Massachusetts. My areas of interest include Math, Computer
+            Science, and Entrepreneurship.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      data-bs-spy="scroll"
+      data-bs-target="#navbar-example2"
+      data-bs-offset="0"
+      class="scrollspy-example"
+      tabindex="0"
+    >
+      <div class="container">
+        <div class="row" id="projects">
+          <hr height="2px" style="background-color: maroon;"/>
+          <div class="h2 d-flex justify-content-center align-items-center" 
+          style="height: 48px; text-align: center; border-radius: 8px; color:maroon">
+          Research
+        </div>
+        <hr height="2px" style="background-color: maroon;"/>
+        <div class="col">
+          <div class="card border-0">
+            <div class="card-body">
+              <p class="card-text">
+                With MIT PRIMES, I am currently conducting research in the
+                realm of distributed systems. I am a member of the D.O.C.C.
+                lab, a research group at Tufts focusing on the diagnosis,
+                observability, and configuration of cloud systems.
+              </p>
+              <h6 class="card-title">Abstract</h5>
+                <p class="card-text">
+                  Long tail latencies continue to hold back the performance of
+                  microservices, especially at scale. Timeouts are important in
+                  determining whether a request has succeeded or failed, yet
+                  there has not been a significant volume of work so far to find
+                  an optimal timeout. To mitigate long wait times, we propose
+                  many approaches to determine the optimal amount of time to
+                  wait before deciding that a request will never come back and
+                  sending another one (specifically with idempotent APIs: making
+                  multiple requests to an API will have the same behavior as a
+                  single request). We condense our methods in a system called
+                  ALTO (ALTO Analyzes Latencies for Timeout Optimization). In
+                  order to evaluate these approaches, a new microservice testbed
+                  was developed with simplicity, robustness, and
+                  comprehensibility in mind, rather than solely performance. In
+                  order to evaluate ALTO, we will model realistic changes in the
+                  testbed, and verify that ALTO modifies timeouts appropriately
+                  in a timely manner.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card border-0">
+              <div class="card-body">
+                <h5 class="card-title">PDF</h5>
+                <p class="card-text"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row" id="entrepreneurship">
+          <hr height="2px" style="background-color: maroon;"/>
+          <div class="h2 d-flex justify-content-center align-items-center" 
+          style="height: 48px; text-align: center; border-radius: 8px; color:maroon">
+          Entrepreneurship
+        </div>
+        <hr height="2px" style="background-color: maroon;"/>
+          <div class="col">
+            <div class="d-flex justify-content-center">
+              <a href="https://imtcontest.org" target="_blank">
+                <img src="static/images/logo.png" height="280" width="280" style="transform: rotate(90deg)"/>
+              </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card border-0">
+              <div class="card-body">
+                <p class="card-text">
+                  Co-founder and director of
+                  <a href="https://imtcontest.org" target="_blank">IMTC,</a> a
+                  math competition that aims to push the limits of young
+                  mathematicians, I have developed skills like teamwork,
+                  leadership, and problem-solving.
+                </p>
+                <p class="card-text">
+                  Along with creating novel, interesting, and enjoyable
+                  problems, I also seek sponsorships, maintain our website and
+                  DNS configurations, and generally coordinate the team.
+                </p>
+                <p class="card-text"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+                <hr height="2px" style="background-color: maroon;"/>
+
+        <div class="row" id="math">
+            <div class="h2 d-flex justify-content-center align-items-center" 
+            style="height: 48px; text-align: center; border-radius: 8px; color:maroon">
+            Math
+          </div>
+                  <hr height="2px" style="background-color: maroon;"/>
+
+          <div class="col border-right" >content</div>
+          <div class="col">content</div>
+        </div>                          
+        <hr height="2px" style="background-color: maroon;"/>
+
+         <div class="row" id="projects">
+            <div class="h2 d-flex justify-content-center align-items-center" 
+            style="height: 48px; text-align: center; border-radius: 8px; color:maroon">
+            Projects
+          </div>
+          <hr height="2px" style="background-color: maroon;"/>
+
+          <div class="col border-right" >content</div>
+          <div class="col">content</div>
+        </div>
+          <hr height="2px" style="background-color: maroon;"/>
+
+        <div class="row" id="music">
+            <div class="h2 d-flex justify-content-center align-items-center" 
+            style="height: 48px; text-align: center; border-radius: 8px; color:maroon">
+            Music
+          </div>
+                            <hr height="2px" style="background-color: maroon;"/>
+
+          <div class="col border-right" >content</div>
+          <div class="col">content</div>
+        </div>
+          <hr height="2px" style="background-color: maroon;"/>
+
+                        <div class="row" id="origami">
+            <div class="h2 d-flex justify-content-center align-items-center" 
+            style="height: 48px; text-align: center; border-radius: 8px; color:maroon">
+            Origami
+          </div>
+                            <hr height="2px" style="background-color: maroon;"/>
+
+          <div class="col border-right" >content</div>
+          <div class="col">content</div>
+        </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
