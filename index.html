@@ -1,340 +1,479 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <script
-      type="text/javascript"
-      id="MathJax-script"
-      async
-      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-  </head>
-  <body>
-    <!-- As a heading -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: maroon;">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Govind Velamoor</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#projects"
-                >Research</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#entrepreneurship">Entrepreneurship</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#math">Math</a>
-            </li>
-             <li class="nav-item">
-              <a class="nav-link" href="#projects">Projects</a>
-            </li>
-                         <li class="nav-item">
-              <a class="nav-link" href="#music">Music</a>
-            </li>
-                         <li class="nav-item">
-              <a class="nav-link" href="#origami">Origami</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <br />
-    <div class="container col-xxl-8 px-4 py-5">
-      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-        <div class="col-10 col-sm-8 col-lg-6">
-          <img
-            src="static/images/govind_velamoor-480.webp"
-            class="d-block mx-lg-auto img-fluid"
-            alt="Bootstrap Themes"
-            width="700"
-            height="500"
-            loading="lazy"
-          />
-        </div>
-        <div class="col-lg-6">
-          <h1 class="display-5 fw-bold lh-1 mb-3">Hi, I'm Govind Velamoor</h1>
-          <p class="lead">
-            I'm a 17 year old rising senior at the Commonwealth School in
-            Boston, Massachusetts. My areas of interest include Math, Computer
-            Science, and Entrepreneurship.
-          </p>
-        </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Index</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+      </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  <script>
+    function handleNavTabClick(e) {
+      console.log('event', e);
+      targetElement = document.getElementById(e.srcElement.id);
+      document.querySelectorAll('.nav-link').forEach(function (element) {
+        element.classList.remove('active');
+      })
+      targetElement.classList.add('active');
+    }
+  </script>
+</head>
+
+<body>
+
+  <!-- As a heading -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: maroon;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Govind Velamoor</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" id="research-tab" href="#research" onclick="handleNavTabClick(event);">Research</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#entrepreneurship" id="entrepreneurship-tab" onclick="handleNavTabClick(event);">Entrepreneurship</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#math"  id="math-tab" onclick="handleNavTabClick(event);">Math</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects"  id="projects-tab" onclick="handleNavTabClick(event);">Projects</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#music" id="music-tab" onclick="handleNavTabClick(event);">Music</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="#origami"  id="origami-tab" onclick="handleNavTabClick(event);">Origami</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#quickfacts"  id="quickfacts-tab" onclick="handleNavTabClick(event);">Quick Facts</a>
+          </li>
+        </ul>
       </div>
     </div>
-    <div
-      data-bs-spy="scroll"
-      data-bs-target="#navbar-example2"
-      data-bs-offset="0"
-      class="scrollspy-example"
-      tabindex="0"
-    >
+  </nav>
+  <br />
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="static/images/speaking_at_PRIMES.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
+          width="700" height="500" loading="lazy" />
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold lh-1 mb-3">Hi, I'm Govind Velamoor</h1>
+        <p class="lead">
+          I'm an 18 year old senior at the Commonwealth School in
+          Boston, Massachusetts. I am interested in using mathematics and computer science in research and
+          entrepreneurship.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
     <div class="container">
       <div class="container text-center">
         <div class="row align-items-start">
           <div class="col">
-            <hr style="background-color: maroon;height:5px"/>
+            <hr style="background-color: maroon;height:5px" />
           </div>
           <div class="col">
-            <h1 style="color:maroon">Research</h1> 
+            <h1 style="color:maroon">Research</h1>
           </div>
           <div class="col">
-            <hr style="background-color: maroon;height:5px"/>
+            <hr style="background-color: maroon;height:5px" />
           </div>
         </div>
       </div>
 
-        <div class="row" id="projects">
+      <div class="row" id="research">
         <div class="col">
           <div class="card border-0">
             <div class="card-body">
               <p class="card-text">
                 With MIT PRIMES, I am currently conducting research in the
-                realm of distributed systems. I am a member of the D.O.C.C.
-                lab, a research group at Tufts focusing on the diagnosis,
+                realm of distributed systems. I am a member of the <a href="https://docclab.cs.tufts.edu/">D.O.C.C.
+                  lab</a>, a research group at Tufts focusing on the diagnosis,
                 observability, and configuration of cloud systems.
               </p>
-              <h6 class="card-title">Abstract</h5>
-                <p class="card-text">
-                  Long tail latencies continue to hold back the performance of
-                  microservices, especially at scale. Timeouts are important in
-                  determining whether a request has succeeded or failed, yet
-                  there has not been a significant volume of work so far to find
-                  an optimal timeout. To mitigate long wait times, we propose
-                  many approaches to determine the optimal amount of time to
-                  wait before deciding that a request will never come back and
-                  sending another one (specifically with idempotent APIs: making
-                  multiple requests to an API will have the same behavior as a
-                  single request). We condense our methods in a system called
-                  ALTO (ALTO Analyzes Latencies for Timeout Optimization). In
-                  order to evaluate these approaches, a new microservice testbed
-                  was developed with simplicity, robustness, and
-                  comprehensibility in mind, rather than solely performance. In
-                  order to evaluate ALTO, we will model realistic changes in the
-                  testbed, and verify that ALTO modifies timeouts appropriately
-                  in a timely manner.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card border-0">
-              <div class="card-body">
-                <h5 class="card-title">PDF</h5>
-                <p class="card-text"></p>
-              </div>
+              <h6 class="card-title">Abstract</h6>
+              <p class="card-text">
+                Timeouts are critical in determining whether a request has succeeded or failed. Developers face several
+                challenges when setting timeout values in distributed systems; the specific challenge we investigate
+                being the systems’ propensity to change, both over the short- and long-term. We propose three
+                timeout-optimized policies targeting change over different time scales, assuming APIs that are both
+                idempotent and atomic. We evaluate our approaches on a home-grown microservices testbed and on
+                DeathStarBench's socialNetwork application. We will compare the median and tail latency requests when
+                each approach is used in simulated environments with changing system performance.
+              </p>
             </div>
           </div>
         </div>
-        
-      <div class="container text-center">
-        <div class="row align-items-start">
-          <div class="col">
-            <hr style="background-color: maroon;height:5px"/>
-          </div>
-          <div class="col">
-            <h1 style="color:maroon">Entrepreneurship</h1> 
-          </div>
-          <div class="col">
-            <hr style="background-color: maroon;height:5px"/>
+        <div class="col">
+          <div class="card border-0">
+            <div class="card-body">
+              <!-- <h5 class="card-title">PDF</h5> -->
+              <p class="card-text">
+                <embed src="static/velamoor_samanta_adaptive_timeout_strategies.pdf" width="500px" height="600px" />
+              </p>
+            </div>
           </div>
         </div>
       </div>
-        <div class="row" id="entrepreneurship">
-          <div class="col">
-            <div class="d-flex justify-content-center">
-              <a href="https://imtcontest.org" target="_blank">
-                <img src="static/images/imtcred.png" height="280" width="280"/>
-              </a>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card border-0">
-              <div class="card-body">
-                <p class="card-text">
-                  Co-founder and director of
-                  <a href="https://imtcontest.org" target="_blank">IMTC,</a> a
-                  math competition that aims to push the limits of young
-                  mathematicians, I have developed skills like teamwork,
-                  leadership, and problem-solving.
-                </p>
-                <p class="card-text">
-                  Along with creating novel, interesting, and enjoyable
-                  problems, I also seek sponsorships, maintain our website and
-                  DNS configurations, and generally coordinate the team.
-                </p>
-                <p class="card-text"></p>
-              </div>
-            </div>
-          </div>
-        </div>
 
-      
-      <div class="container text-center mt-4">
+      <div class="container text-center" id="entrepreneurship">
         <div class="row align-items-start">
           <div class="col">
-            <hr style="background-color: maroon;height:5px"/>
+            <hr style="background-color: maroon;height:5px" />
           </div>
           <div class="col">
-            <h1 style="color:maroon">Math</h1> 
+            <h1 style="color:maroon">Entrepreneurship</h1>
           </div>
           <div class="col">
-            <hr style="background-color: maroon;height:5px"/>
-          </div>
-        </div>
-        <div class="row" style="text-align: left;">
-           <h3 style="color:maroon">
-             Awards
-          </h3>
-          <div class="row">
-            <ul>
-              <li>USAMO Qualifier</li>
-              <li>USACO Platinum</li>
-              <li>ARML Top 10</li>
-            </ul>
-          </div>
-        </div>
-        <div class="row" style="text-align: left;">
-          <h3 style="color:maroon">
-             Leadership
-          </h3>
-          <div class="row">
-            <ul>
-              <li>Co-founder, Director and Head of Marketing at IMTC</li>
-              <li>Team Captain of Commonwealth Math Club</li>
-              <li>President of Commonwealth Computer Science Club</li>
-            </ul>
-        </div>
-        <div class="row" style="text-align: left;">
-          <h3 style="color:maroon">
-             Sample problems from IMTC
-          </h3>
-        </div>
-        <div class="row d-none d-md-flex">
-          <div class="col py-3 px-lg-5 border-0 border-bottom border-top" style="color:maroon; text-align: center;">
-            <h4>
-              Problem
-            </h4>
-          </div>
-          <div class="col py-3 px-lg-5 border-0 border-bottom border-top" style="color:maroon;text-align: center;">
-            <h4>
-              Solution
-            </h4>
-          </div>
-        </div>  
-        <div class="row">
-          <div class="d-sm-none" style="text-align: left;color:maroon"><h5>Problem</h5></div>
-          <div class="col-sm py-3 px-lg-5 border-0 border-end">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
-          <div class="d-sm-none" style="text-align: left; color:maroon"><h5>Solution</h5></div>
-          <div class="col-sm py-3 px-lg-5 border-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
-        </div>
-        <div class="row">
-          <div class="d-sm-none" style="text-align: left;color:maroon"><h5>Problem</h5></div>
-          <div class="col-sm py-3 px-lg-5 border-0 border-end border-bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
-          <div class="d-sm-none" style="text-align: left; color:maroon"><h5>Solution</h5></div>
-          <div class="col-sm py-3 px-lg-5 border-0 border-bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
-        </div>
-      </div>
-      <div class="container text-center mt-4">
-        <div class="row align-items-start">
-          <div class="col">
-            <hr style="background-color: maroon;height:5px"/>
-          </div>
-          <div class="col">
-            <h1 style="color:maroon">Projects</h1> 
-          </div>
-          <div class="col">
-            <hr style="background-color: maroon;height:5px"/>
+            <hr style="background-color: maroon;height:5px" />
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="col card" style="width: 18rem;">
-          <video src="" class="card-img-top" autoplay controls></video>
-           <div class="card-body">
+        <div class="col">
+          <div class="d-flex justify-content-center">
+            <a href="https://imtcontest.org" target="_blank">
+              <img src="static/images/imtcred.png" height="280" width="280" />
+            </a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card border-0">
+            <div class="card-body">
+              <p class="card-text">
+                I'm a co-founder and director of
+                <a href="https://imtcontest.org" target="_blank">IMTC,</a> a
+                math competition that aims to push the limits of young
+                mathematicians. IMTC has reached over 2500 students globally, from countries inlcluding Thailand, Peru, and Kenya, and is consistently supported by five corpotate sponsors who have provide prizes worth, on average $20000 per competition. 
+              </p>
+              <p class="card-text">
+                Along with creating novel, interesting, and enjoyable
+                problems, I secure sponsorships, maintain our website, and generally
+                coordinate the team.
+              </p>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container text-center mt-4" id="math">
+        <div class="row align-items-start">
+          <div class="col">
+            <hr style="background-color: maroon;height:5px" />
+          </div>
+          <div class="col">
+            <h1 style="color:maroon">Math</h1>
+          </div>
+          <div class="col">
+            <hr style="background-color: maroon;height:5px" />
+          </div>
+        </div>
+        <div class="row" style="text-align: left;">
+          <h3 style="color:maroon">
+            Select problems from IMTC
+          </h3>
+          <div class="row d-none d-md-flex">
+            <div class="col py-3 px-lg-5 border-0 border-bottom border-top" style="color:maroon; text-align: center;">
+              <h4>Problem</h4>
+            </div>
+            <div class="col py-3 px-lg-5 border-0 border-bottom border-top" style="color:maroon;text-align: center;">
+              <h4>
+                Solution
+              </h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="d-sm-none" style="text-align: left;color:maroon">
+              <h5>Problem</h5>
+            </div>
+            <div class="col-sm py-3 px-lg-5 border-0 border-end border-bottom">Given that the distinct real numbers,
+              \(r_1\), \(r_2\) and \(r_3\) are roots of the equation
+              $$12r_1x^3+72r_2x^2+432r_3x=0,$$
+              what is the value of \(r_1^2+r_2^2+r_3^2\)? <br> <em>Proposed by Govind Velamoor</em> </div>
+            <div class="d-sm-none" style="text-align: left; color:maroon">
+              <h5>Solution</h5>
+            </div>
+            <div class="col-sm py-3 px-lg-5 border-0 border-bottom">
+              <div class="accordion" id="problemOne">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                      Reveal solution
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                    data-bs-parent="#problemOne">
+                    <div class="accordion-body">
+                      Let \(f(x)=12r_1x^3+72r_2x^2+432r_3x\). Clearly \(f(0)=0\), so one of \(r_1,r_2,r_3\) is equal to
+                      zero. If \(r_1=0\), \(f\) is quadratic, and cannot have \(3\) distinct roots. If \(r_3=0\),
+                      \(x^2\) divides \(f(x)\) and so \(f\) must have a root \(0\) with multiplicity two, forbidden by
+                      the distinct condition. Thus, \(r_2=0\). <br><br>
+
+                      Now \(f(x)=12x(r_1x^2+36r_3)\). The factor of \(x\) gives us the root \(0\), so \(r_1,r_3\) must
+                      be roots of \(r_1x^2+36r_3=0\). Note that \(r_1+r_3=0\) by Vieta's, so we can let \(r_3=-r_1\).
+                      This gets us \(r_1(x^2-36)=0\). Substituting \(x=r_1\), we find \(r_1=\pm 6\) and so \(r_3=\mp
+                      6\). <br><br>
+
+                      Our answer is \(0^2+(\pm 6)^2 + (\mp 6)^2 = 72\).
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="d-sm-none" style="text-align: left;color:maroon">
+              <h5>Problem</h5>
+            </div>
+            <div class="col-sm py-3 px-lg-5 border-0 border-end border-bottom">Define a sequence of rational numbers,
+              \(a_0, a_1, a_2, \cdots\) so that \(a_{k+1} = |1-\frac{1}{a_k}|\). Find the number of possible values of
+              \(a_0\) so that \(a_{12}=0\). <br><em>Proposed by Govind Velamoor, Tanishq Pauskar</em> </div>
+            <div class="d-sm-none" style="text-align: left; color:maroon">
+              <h5>Solution</h5>
+            </div>
+            <div class="col-sm py-3 px-lg-5 border-0 border-bottom">
+              <div class="accordion" id="problemTwo">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Reveal solution
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#problemTwo">
+                    <div class="accordion-body">
+                      We work backwards. Notice that for any \(a_n\), \[a_n = 1-\frac{1}{a_{n-1}}\] and \[-a_n =
+                      1-\frac{1}{a_{n-1}}\]
+                      \(\textbf{Case 1:}\) \(a_n > 1\)
+                      Consider the first equation. In this case, the solution for \(a_{n-1}\) will always be negative.
+                      Negative numbers cannot be in this sequence unless they are \(a_0\), because every next number is
+                      defined as the absolute value of a number. In the second equation, we will always get a positive
+                      result that is less than \(1\).<br> <br>
+                      \(\textbf{Case 2:}\) \(a_n < 1\) From the first equation, we will get a positive solution greater
+                        than \(1\) and from the second we will get a positive solution less than \(1\).<br> <br>
+                        \(\textbf{Case 3:}\) \(a_n = 1\)
+                        We will always get \(a_{n-1} = \frac{1}{2}\). Furthermore, it is impossible for any \(a_n\) not
+                        \(a_{11}\) to be \(1\), because that would mean that \(a_{n+1} = 0\), which is impossible. So,
+                        for any \(n\) such that \(2\leq n \leq 11\), it is true that if \(a_n&gt;1\), then there is only
+                        one valid solution for \(a_{n-1}\) and \(a_{n-1} &lt; 1\), and if \(0&lt;a_n&lt;1\), there are two
+                          solutions for \(a_{n-1}\), one satisfying \(a_{n-1}&gt;1\) and the other satisfying
+                          \(0&lt;a_{n-1}&lt;1\).
+                          <br> <br>
+                          We know that \(a_{12} = 0\), so \(a_{11} = 1\) and \(a_{10} = \frac{1}{2}\). Now, we can use a
+                          recursion to find the number of values of \(a_n\) that are greater and lower than \(1\). Let
+                          \(g_n\) and \(l_n\) be the number of valid solutions that are greater than \(1\) and less than
+                          \(1\) for \(a_n\) (where \(1\leq n \leq 11\)). We know that \(g_{n-1} = l_{n}\) and \(l_{n-1}
+                          = l_{n} + g_{n}\). So, \(l_{n-1} = l_{n} + l_{n+1}\). Because \(l_{11} = 0\) and \(l_{10}=1\),
+                          this is the Fibonacci sequence in reverse! The sequence for \(g\) is the same, but lags one
+                          term behind \(l\). Because \(l_{10} = 1\) and \(g_{10} = 0\), we can compute that \(l_1 = 55\)
+                          (the 10th Fibonacci number) and \(g_1 = 34\) (the 9th Fibonacci number). So, \(a_1\) has
+                          \(55+34=89\) total solutions. Recalling that \(a_0\) can be both positive and negative, we
+                          double this to find our answer: \(89\cdot 2 = \boxed{178}\).
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="d-sm-none" style="text-align: left;color:maroon">
+              <h5>Problem</h5>
+            </div>
+            <div class="col-sm py-3 px-lg-5 border-0 border-end">
+              Let \(ABC\) be an isosceles triangle with \(AB = BC = 70\). Circles \(\omega_1\) and \(\omega_2\) are
+              externally tangent at point \(T\), and are tangent to \(AB\) and \(BC\) at \(A\) and \(C,\) respectively.
+              The center of \(\omega_1\) is equidistant from \(B\) and \(C\). The median from \(C\) to \(AB\) intersects
+              \(\omega_2\) at \(E \neq C\). Given that \(AT=52\), find \(EC\).
+              <br><em>Proposed by Govind Velamoor</em>
+            </div>
+            <div class="d-sm-none" style="text-align: left; color:maroon">
+              <h5>Solution</h5>
+            </div>
+            <div class="col-sm py-3 px-lg-5 border-0">
+
+              <div class="accordion" id="problemThree">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Reveal solution
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#problemThree">
+                    <div class="accordion-body">
+                      Let \(M\) be the midpoint of \(AB\). Because tangents \(BA\) and \(BC\) have equal length, the
+                      power of \(B\) WRT \(\omega_1\) and \(\omega_2\) is equal, so \(B\) lies on the radical axis of
+                      \(\omega_1\), \(\omega_2\). Call the center of \(\omega_1\) \(J\). <br> <br>
+                      Let \(\omega_3\) be the circle with radius \(0\) centered at \(B\), and let \(r\) be the radius of
+                      \(\omega_1\). Now consider the power of \(B\). Because \(B\) lies on the radical axis of
+                      \(\omega_1\), \(\omega_2\), we know that \(BJ^2 - r^2 = CB^2\). But we know that \(BJ = CJ\), so
+                      \(CJ^2 - r^2 = CB^2\). The power of \(C\) WRT \(\omega_3\) is \(CB^2\), and the power of \(C\) WRT
+                      \(\omega_1\) is \(CJ^2 - r^2\). Because we know these two quantities are equal, \(C\) lies on the
+                      radical axis of \(\omega_1\), \(\omega_3\). But since \(M\) is the midpoint of \(AB\), its power
+                      WRT \(\omega_1\) and \(\omega_3\) is also equal, implying that \(CM\) is the radical axis of
+                      \(\omega_1\) and \(\omega_3\). <br> <br>
+                      Now construct \(TB\) and let it intersect \(MC\) at \(R\). Since \(TB\) is the radical axis of
+                      \(\omega_1, \omega_2\), \(R\) is the radical center of \(\omega_1, \omega_2, \omega_3\). This
+                      means that \(BR = RT\), so \(MR\) is a midsegment of \(\triangle BAT\), and \(MR = \frac{AT}{2} =
+                      26\). Let the altitude from \(B\) to \(AT\) intersect \(MR\) at \(F\) and \(AT\) at \(G\). Because
+                      \(ABT\) is isosceles (by equal tangents \(AB\) and \(TB\)), we can compute \(BF = \frac{BG}{2} =
+                      \frac{\sqrt{AB^2 - \left(\frac{AT}{2}\right)^2}}{2} = 4\sqrt{66}. \) <br> <br>
+                      Also, \(BC = 70\), so \(FC = \sqrt{BC^2-BF^2} = 62\). \(FR = \frac{MR}{2} = 13\), so \(RC = 49\).
+                      Now, power of a point on \(R\) WRT \(\omega_2\) yields \(RT^2 = RE \cdot RC\). \(RE =
+                      \frac{35^2}{49} = 25\). Finally, we have \(EC = RC - RE = \boxed{24}\).
+                      <img width="100%" src="static/images/imtcp15.png" alt="Problem 3">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container text-center mt-4" id="projects">
+          <div class="row align-items-start">
+            <div class="col">
+              <hr style="background-color: maroon;height:5px" />
+            </div>
+            <div class="col">
+              <h1 style="color:maroon">Some Projects!</h1>
+            </div>
+            <div class="col">
+              <hr style="background-color: maroon;height:5px" />
+            </div>
+          </div>
+        <!-- </div> -->
+        <!-- Projects starts here -->
+        <!-- 1st row -->
+        <div class="row">
+          <div class="col card" style="width: 18rem;">
+            <video src="static/images/triangulation.mov" class="card-img-top" controls></video>
+            <div class="card-body">
               <h5 class="card-title">Delaunay Triangulation</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <p class="card-text">To generate meshes, animators use delaunay triangulation, a technique from
+                Computational Geometry. The interface and backend for this project were written in Rust. All code can be
+                found on my GitHub, <a href="https://github.com/windigo216/delaunay-rust">here</a>. </p>
             </div>
-        </div>
-        <div class="col card" style="width: 18rem;">
-          <video src="" class="card-img-top" autoplay controls></video>
-           <div class="card-body">
-              <h5 class="card-title">Data clustering</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+          <div class="col card" style="width: 18rem;">
+            <video src="static/images/desmosmusic.mov" class="card-img-top" controls></video>
+            <div class="card-body">
+              <h5 class="card-title">Desmos Music</h5>
+              <p class="card-text">Music generated in the Desmos graphing calculator! Find the functions used <a
+                  href="https://www.desmos.com/calculator/rl0v1ku3p9">here</a>.</p>
             </div>
-        </div>
-      </div>                          
-      <div class="container text-center">
-        <div class="row align-items-start">
-          <div class="col">
-            <hr style="background-color: maroon;height:5px"/>
-          </div>
-          <div class="col">
-            <h1 style="color:maroon">Music</h1> 
-          </div>
-          <div class="col">
-            <hr style="background-color: maroon;height:5px"/>
           </div>
         </div>
-      </div>
-      <div class="row">
-          <div class="col border-right" >content</div>
-          <div class="col">content</div>
-        </div>                          
+        <!-- 2nd row -->
+        <div class="row">
+          <div class="col card" style="width: 18rem;">
+            <video src="static/images/agent_smith_demo.mp4" class="card-img-top" controls></video>
+            <div class="card-body">
+              <h5 class="card-title">Agent Smith</h5>
+              <p class="card-text">I developed a large-language-model-based agent that has access to my computer and can
+                modify its own source code to give itself additional capabilities. Here, I asked it to create a simple
+                flask website. See code <a href="https://github.com/windigo216/agent-smith">here</a>! </p>
+            </div>
+          </div>
+          <div class="col card" style="width: 18rem;">
+            <video src="static/images/pathfinder_demo.mp4" class="card-img-top" controls></video>
+            <div class="card-body">
+              <h5 class="card-title">Pathfinder</h5>
+              <p class="card-text">I helped build the Tech Tigers' pathfinder system, based on Dijkstra's algorithm. In
+                this video, you can see our robot hit a truss, realize it's off course, and generate a new trajectory to
+                the bottom of the field.</p>
+            </div>
+          </div>
+        </div>
+        <div class="container text-center" id="origami">
+          <div class="row align-items-start">
+            <div class="col">
+              <hr style="background-color: maroon;height:5px" />
+            </div>
+            <div class="col">
+              <h1 style="color:maroon">Origami, just for fun!</h1>
+            </div>
+            <div class="col">
+              <hr style="background-color: maroon;height:5px" />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col border-right">
+            <img width="100%" src="static/images/origami_photo1.jpg" alt="Origami 1">
+          </div>
+          <div class="col">
+            <img width="100%" src="static/images/origami_photo2.jpg" alt="Origami 2">
+          </div>
+        </div>
 
-
-      <div class="container text-center">
-        <div class="row align-items-start">
-          <div class="col">
-            <hr style="background-color: maroon;height:5px"/>
-          </div>
-          <div class="col">
-            <h1 style="color:maroon">Origami</h1> 
-          </div>
-          <div class="col">
-            <hr style="background-color: maroon;height:5px"/>
+        <div class="container text-center" id="quickfacts">
+          <div class="row align-items-start">
+            <div class="col">
+              <hr style="background-color: maroon;height:5px" />
+            </div>
+            <div class="col">
+              <h1 style="color:maroon">Quick facts</h1>
+            </div>
+            <div class="col">
+              <hr style="background-color: maroon;height:5px" />
+            </div>
           </div>
         </div>
-      </div>
-      <div class="row">
-          <div class="col border-right" >content</div>
-          <div class="col">content</div>
-        </div>                          
 
+        <div class="row">
+          <div class="col border-right">
+            <h3 style="color:maroon">
+              Two truths and a lie
+            </h3>
+            <p>
+              1. I can name every single country on a world map <br>
+              2. I can type as fast as I speak <br>
+              3. All of my fingers are double jointed
+            </p>
+          </div>
 
+          <div class="col">
+            <h3 style="color:maroon">
+              Select Awards
+            </h3>
+            <!-- <ul> -->
+            ILO Gold Scholar (with perfect score) <br>
+            FTC World Championships Ochoa Division Design Award <br>
+            2x AIME Qualifer
+            <!-- </ul> -->
+          </div>
         </div>
-        </div>
+
       </div>
     </div>
-  </body>
+  </div>
+  </div>
+</body>
+
 </html>
